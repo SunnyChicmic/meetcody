@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Summarizer</title>
+    <style>
+        body {
+            background-color: black;
+            color: #08b9c0;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        textarea {
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background-color: #08b9c0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        h3 {
+            color: #08b9c0;
+        }
+    </style>
+</head>
+<body>
+    <form action="{% url 'summarizer' %}" method="post">
+        {% csrf_token %}
+        <label for="text">Enter your text here:</label><br>
+        <textarea name="text_input" rows="30" cols="190">
+        </textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if flag %}
+    <h3>Your summarized text is:</h3>
+    {% for i in res %}
+    {{ forloop.counter }}.{{ i }}<br>
+    {% endfor %}
+    {% endif %}
+</body>
+</html>

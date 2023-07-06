@@ -2,11 +2,8 @@ Django==3.2.10
 pymysql==1.0.2
 djangorestframework==3.14.0
 django-environ==0.8.1
+langchain==0.0.225
+beautifulsoup4==4.12.2
+djangorestframework==3.14.0
 pillow
-# djanago-easy-validator
-# fcm-django
-# django-celery
-# redis
-# django-celery-results
-# django-celery-beat
 pyfcm
