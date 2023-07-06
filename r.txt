@@ -1,0 +1,12 @@
+Django==3.2.10
+pymysql==1.0.2
+djangorestframework==3.14.0
+django-environ==0.8.1
+pillow
+# djanago-easy-validator
+# fcm-django
+# django-celery
+# redis
+# django-celery-results
+# django-celery-beat
+pyfcm
